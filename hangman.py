@@ -11,9 +11,8 @@ def position_correct_letter(letter, word):
     return indices
 
 
-
 def hangman():
-    word_string = "hospital reinforce glove article recognize identity process bargain practical publication cooperative important prosper shatter bed yard game cable stock toss dish democratic thank impound jungle"
+    word_string = "hospital reinforce glove article recognize identity process bargain practical publication cooperative important prosper shatter bed yard game cable stock toss dish democratic thank impound jungle fat crouch assumption pop age candidate nut we disgrace official choice conservation dorm miracle glow twilight gold tender ban anticipation diameter fibre wear suffering salon license solution turkey garage dine restoration effective discrimination bush economics blow look alarm concept flu flex defend electronics enhance hear timber resist site district tenant"
     word_list = word_string.split()
     answer = random.choice(word_list)
 
@@ -29,7 +28,7 @@ def hangman():
         if tries == 0:
             print(f"Game Over! You ran out of tries. The answer is '{answer}'")
             break
-        print(f"\n\t{blank_template}\n")
+        print(f"\n\t{blank_template}\t\tlength = {len(answer)}\n")
         print(f"Tries left: {tries}")
         print(f"Letters used: {used_letters}")
         guess = input("Enter a guess for the letter: ").lower()
