@@ -26,8 +26,9 @@ def hangman():
 
     for i in range(1, (8+len(answer))):
         if tries == 0:
+            print(f"Game Over! You ran out of tries. The answer is '{answer}'")
             break
-        print(blank_template)
+        print(f"\n\t{blank_template}\n")
         print(f"Tries left: {tries}")
         print(f"Letters used: {used_letters}")
         guess = input("Enter a guess for the letter: ").lower()
@@ -43,13 +44,12 @@ def hangman():
             for i in indices:
                 blank_list[i] = guess
                 blank_template = "".join(blank_list)
-                attempts+=1
+            attempts+=1
             print("That letter is in the word!")
             if blank_template == answer:
-                print(f"Congratulations, you won in {attempts} attempts! The answer is {answer}.")
+                print(f"\nCongratulations, you won in {attempts} attempts! The answer is '{answer}'.")
                 break
 
-    else: print(f"Game Over! You ran out of tries. The answer is {answer}")
 
 
 
