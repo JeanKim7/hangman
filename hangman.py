@@ -20,7 +20,6 @@ def hangman():
     blank_template = "".join(blank_list)
     
     tries = 8
-    attempts = 0
 
     used_letters = []
 
@@ -38,17 +37,15 @@ def hangman():
             used_letters.append(guess)
             print("Sorry, that letter isn't in the word!")
             tries-=1
-            attempts+=1
 
         else:
             indices = position_correct_letter(guess, answer)
             for i in indices:
                 blank_list[i] = guess
                 blank_template = "".join(blank_list)
-            attempts+=1
             print("That letter is in the word!")
             if blank_template == answer:
-                print(f"\nCongratulations, you won in {attempts} attempts! The answer is '{answer}'.")
+                print(f"\nCongratulations, you won!!! The answer is '{answer}'.")
                 break
 
 
