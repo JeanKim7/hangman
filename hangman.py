@@ -10,11 +10,14 @@ def position_correct_letter(letter, word):
             indices.append(i)
     return indices
 
-
-def hangman():
+def choose_random_word():
     word_string = "hospital reinforce glove article recognize identity process bargain practical publication cooperative important prosper shatter bed yard game cable stock toss dish democratic thank impound jungle fat crouch assumption pop age candidate nut we disgrace official choice conservation dorm miracle glow twilight gold tender ban anticipation diameter fibre wear suffering salon license solution turkey garage dine restoration effective discrimination bush economics blow look alarm concept flu flex defend electronics enhance hear timber resist site district tenant"
     word_list = word_string.split()
-    answer = random.choice(word_list)
+    return random.choice(word_list)
+
+
+def hangman():
+    answer = choose_random_word()
 
     blank_list =["_" for a in range(len(answer))]
     blank_template = "".join(blank_list)
