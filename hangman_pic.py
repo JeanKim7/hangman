@@ -1,4 +1,6 @@
 def hangman_picture(x):
+    """function to print picture based on how many tries are left"""
+    
     if x==0:
         print   ("""
                     _______________
