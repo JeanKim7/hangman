@@ -11,6 +11,7 @@ def position_correct_letter(letter, word):
     return indices
 
 
+
 def hangman():
     word_string = "hospital reinforce glove article recognize identity process bargain practical publication cooperative important prosper shatter bed yard game cable stock toss dish democratic thank impound jungle"
     word_list = word_string.split()
@@ -39,6 +40,7 @@ def hangman():
             print("Sorry, that letter isn't in the word!")
             tries-=1
             attempts+=1
+
         else:
             indices = position_correct_letter(guess, answer)
             for i in indices:
