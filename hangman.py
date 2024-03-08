@@ -1,4 +1,5 @@
 import random
+from hangman_pic import hangman_picture
 
 # A game of hangman
 
@@ -22,14 +23,16 @@ def hangman():
     blank_list =["_" for a in range(len(answer))]
     blank_template = "".join(blank_list)
     
-    tries = 8
+    tries = 7
 
     used_letters = []
 
-    for i in range(1, (8+len(answer))):
+    for i in range(1, (7+len(answer))):
         if tries == 0:
+            hangman_picture((7-tries))
             print(f"Game Over! You ran out of tries. The answer is '{answer}'")
             break
+        hangman_picture((7-tries))
         print(f"\n\t{blank_template}\t\tlength = {len(answer)}\n")
         print(f"Tries left: {tries}")
         print(f"Letters used: {used_letters}")
@@ -56,4 +59,3 @@ def hangman():
 
 
 hangman()
-
